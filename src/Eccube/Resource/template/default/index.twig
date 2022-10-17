@@ -1,0 +1,198 @@
+{#
+This file is part of EC-CUBE
+
+Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
+
+http://www.ec-cube.co.jp/
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+#}
+{% extends 'default_frame.twig' %}
+
+{% set body_class = 'front_page' %}
+
+{% block stylesheet %}
+    <style>
+        {# .slick-slider {
+            margin-bottom: 30px;
+        } #}
+        .slick-slider img {       
+          
+          height:650px;
+          width:100%;   
+          margin-bottom:68px;
+          margin-bottom:4em;
+             
+        }
+       
+        .slick-dots {
+    
+            list-style: none;
+            display:none;
+    
+        }
+{# 
+        .slick-dots li {
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0 5px;
+            padding: 0;
+
+            cursor: pointer;
+        }
+
+        .slick-dots li button {
+            font-size: 0;
+            line-height: 0;
+            display: block;
+            width: 20px;
+            height: 20px;
+            padding: 5px;
+            cursor: pointer;
+            color: transparent;
+            border: 0;
+            outline: none;
+            background: transparent;
+        }
+
+        .slick-dots li button:hover,
+        .slick-dots li button:focus {
+            outline: none;
+        }
+
+        .slick-dots li button:hover:before,
+        .slick-dots li button:focus:before {
+            opacity: 1;
+        }
+
+        .slick-dots li button:before {
+            content: " ";
+            line-height: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            text-align: center;
+            opacity: .25;
+            background-color: black;
+            border-radius: 50%;
+
+        } #}
+
+        {# .slick-dots li.slick-active button:before {
+            opacity: .75;
+            background-color: black;
+        }
+
+        .slick-dots li button.thumbnail img {
+            width: 0;
+            height: 0;
+        } #}
+        .buton-stylist{
+        font-size: 20px;
+        color: #fff;
+        margin-top: -8em;
+        position: absolute;
+
+      }
+    
+    .previous{
+        border: 2px solid #fff;
+        border-radius: 50%;
+        padding: 4px 12px;
+        margin-top: -18em;
+        margin-left: 19px;
+        position: absolute;
+        font-size: 20px;
+        color: #FFF;    
+
+      }
+    .next{
+        border: 2px solid #fff;
+        border-radius: 50%;
+        padding: 4px 12px;
+        margin-top: -18em;
+        position: absolute;
+        font-size: 20px;
+        color: #fff;
+        margin-left: 60em;
+       
+      }
+    .next:hover{
+        background-color: rgb(134, 186, 9);
+        border:none;
+        cursor:pointer;
+    }
+    .previous:hover{
+        background-color: rgb(134, 186, 9);
+        border:none;
+        cursor:pointer;
+    }
+         
+  #slick-slide00, #slick-slide01 {
+    display:none;
+  }
+</style>
+{% endblock %}
+
+{% block javascript %}
+    <script>
+        $(function() {
+            $('.main_visual').slick({
+                dots: true,
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                prevArrow: $('.previous'),
+                nextArrow: $('.next'),
+            });
+        });
+        
+   </script>
+{% endblock javascript %}
+
+{% block main %}
+   
+   <div class="ec-sliderRole">
+        <div class="main_visual">
+            <div class="item slick-slide"><img src="{{ asset('assets/img/top/slider28.jpg') }}" >
+                <div class="sub-item">
+                    <h4 class="green"><span>Walnuts</span></h4>
+                    <h2>100% tự nhiên</h2>
+                    <p>Giảm giá khi đặt mua ngay hôm nay</p>
+                    <a href="#">mua ngay</a>
+                </div>
+                <div class="sub-item-img"><img src="{{ asset('assets/img/top/imgslide13.png') }} " style="height:450px;"></div>
+            </div>
+           <div class="item slick-slide" ><img src="{{ asset('assets/img/top/slider26.jpg') }}" >
+                <div class="sub-item">
+                    <h4 class="green sub-green"><span>Apple Juicea<span></h4>
+                    <h2>100% tự nhiên</h2>
+                    <p>Giảm giá khi đặt mua ngay hôm nay</p>
+                    <a href="＃" >mua ngay</a>
+                </div>
+                <div class="sub-item-img"><img src="{{ asset('assets/img/top/imgslide22.png') }} " style="height:450px;"></div> 
+            </div> 
+        </div>   
+        {# <div class ="buton-stylist"> #}
+            <div class="previous"><i class="fas fa-chevron-left"></i></div>
+            <div class="next"><i class="fas fa-chevron-right"></i></div>
+        {# </div> #}
+        
+        <div
+             class ="fb-messenger"><img src="{{ asset('assets/img/top/fb-messenger.png') }} ">
+        </div>    
+        <div class="ec-cartNavi">
+            <a href="{{ url('cart') }}">
+                {{ include('Block/cart.twig') }}
+            </a>    
+        </div>  
+
+    </div>
+
+
+{% endblock %}

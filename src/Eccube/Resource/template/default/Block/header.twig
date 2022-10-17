@@ -1,0 +1,49 @@
+{#
+This file is part of EC-CUBE
+
+Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
+
+http://www.ec-cube.co.jp/
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+#}
+<div class="ec-headerNaviRole ">
+    <div class="ec-headerNaviRole__left">
+        <h1>
+            <a href="{{ url('homepage') }}">
+                CLEVERFOOD
+            </a>
+        </h1>
+         <div class="ec-headerNaviRole__search">
+            {{ render(path('block_search_product')) }}
+        </div>
+        <div class="ec-headerRole__navSP">
+            {{ include('Block/nav_sp.twig') }}
+        </div>
+    </div>
+    <div class="ec-headerNaviRole__right">
+        <ul class="nav">
+            <li class ="nav-stylist"><a href="#">Trang chủ</a></li>
+            <li><a href="#">giới thiệu</a></li>
+            <li>
+                <a href="#">cửa hàng</a>
+                <ul class="sub-menu">
+                <li><a href="#">rau củ </a></li>
+                    <li><a href="#">trái cây </a></li>
+                    <li><a href="#">đồ uống</a></li>
+                    <li><a href="#">đồ khô</a></li>
+                </ul>
+            </li>
+            <li><a href="">kiến thức </a></li>
+            <li><a href="">liên hệ </a></li>
+        </ul>   
+        <div class ="icon-iterm">
+            <div class="seach-icon"><i class="fas fa-search"></i></div>
+            <a href="{{ url('mypage_login') }}">
+                <div class="user-icon"><i class="fas fa-user"></i></div>
+            </a>
+        </div> 
+        
+    </div>
+</div> 

@@ -1,0 +1,3 @@
+<?php //Plugin%255CGMC%255CController%255CSiteVerificationController
+
+return [PHP_INT_MAX, []];

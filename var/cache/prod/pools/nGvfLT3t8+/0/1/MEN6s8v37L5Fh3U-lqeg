@@ -1,0 +1,35 @@
+<?php //Eccube%255CEntity%255CProduct%2524RelatedProducts
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\OneToMany'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\OneToMany')),
+        clone ($p['Doctrine\\ORM\\Mapping\\OrderBy'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\OrderBy')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'mappedBy' => [
+                'Product',
+            ],
+            'targetEntity' => [
+                'Plugin\\RelatedProduct4\\Entity\\RelatedProduct',
+            ],
+            'cascade' => [
+                [
+                    'persist',
+                    'remove',
+                ],
+            ],
+            'value' => [
+                1 => [
+                    'id' => 'ASC',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+    ],
+    []
+); }];

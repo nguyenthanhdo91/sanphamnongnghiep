@@ -1,0 +1,266 @@
+{#
+This file is part of EC-CUBE
+
+Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
+
+http://www.ec-cube.co.jp/
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+#}
+
+{% block stylesheet %}
+    <style>
+       .slick-prev .slick-arrow {
+            display: none;
+       }
+
+       .ec-newItemRole__list .cart-style {
+            border: 1px solid rgba(173, 171, 171, 0.2);
+            width: 270px;
+            height: 382px ;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .cart-style img {
+            width: 270px ;
+            height: 270px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            width :calc(100%/4);
+                  
+        }
+        
+
+          .cart-style:hover{
+            border: 1px solid rgba(173, 171, 171, 0.6);
+            cursor: pointer;
+            box-shadow:3px 3px 3px rgba(205, 203, 203, 0.2), -3px -3px 3px rgba(205, 203, 203, 0.2);
+            /* box-shadow: 1px 1px 1px 1px rgba(173, 171, 171, 0.4); */
+              }
+        
+                
+        .ItemRole__listItem figure img {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+                      
+        }
+        .ItemRole__listItem figure:hover img {
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+        
+        .column-content {
+            /* margin: 15px 15px 0; */
+            padding: 0;
+            margin-top: 24px;
+        }
+        .column-content:last-child {
+            padding-bottom: 60px;
+        }
+        .column-content::after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+        .column-content div {
+            position: relative;
+            float: left;
+            margin: 14px;    
+            /* margin: -10px 10em 10em 10em; */
+            padding: 0;
+        }
+        .ec-role .column-content div:first-child {
+            margin-left: 0;
+        }
+        
+        .ItemRole__listItem figure {
+            width: 270px !important;
+            height: 270px;
+            margin: 0;
+            padding: 0;
+            /* background: #fff; */
+            overflow: hidden;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+         
+        }
+        .newItemRole__listItem {
+            margin-top: -4px;
+        }
+        .autoplay{
+           
+            display: flex;
+            
+        }
+        p.ec-newItemRole__listItemTitle.sub-listItemTitle {
+            margin-left: 85px;
+            font-weight: 600;
+            position: absolute;
+            padding: 10px;
+            margin-top: 20px;
+            font-size:16px; 
+        }
+          {# p.ec-newItemRole__listItemTitle.sub-listItemPrice {
+            margin-left: 85px;
+            font-weight: 600;
+            position: absolute;
+            padding: 10px;
+            margin-top: 20px;
+            font-size:16px; 
+        } #}
+        button.slick-prev.slick-arrow {
+            display: none;
+        }
+         {# .slick-initialized .slick-slide
+         {
+            display:none;
+         } #}
+         .ItemRole__listItem.column-content.newItemRole__listItem.slick-initialized.slick-slider {
+            margin-top: -2.3em;
+        }
+        {# .cart-style.sub-cart.slick-slide{
+            width:272px !important;
+        }
+         #}
+
+    </style>
+{% endblock %}
+
+ {% block javascript %}
+    {# <script>
+        $(function() {
+            $('.autoplay').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        });          
+   </script> #}
+{% endblock javascript %}
+
+
+<div class="ec-role">
+    <div class="ec-newItemRole">
+            <div class="ItemRole__listItem column-content autoplay "> 
+                <div class ="cart-style sub-cart" style="width: 272px "  >
+                    <figure>
+                        <a href="{{ url('product_detail', {'id': '3'}) }}">
+                            <img src="{{ asset('product-1-470x470.jpg', 'save_image') }}">
+                            <p class="ec-newItemRole__listItemTitle sub-listItemTitle">{{ 'Táo Xanh'|trans }}</p>
+                            <p class="ec-newItemRole__listItemPrice sub-listItemPrice">{{ '￥1,200(税込)'|trans }}</p>
+                        </a>
+                    </figure>                
+                </div>        
+                <div class ="cart-style sub-cart" style="width: 272px " >
+                    <figure>
+                        <a href="{{ url('product_detail', {'id': '4'}) }}">
+                            <img src="{{ asset('nhoxanh.jpg', 'save_image') }}">
+                            <p class="ec-newItemRole__listItemTitle sub-listItemTitle">{{ 'Nho Xanh'|trans }}</p>
+                            <p class="ec-newItemRole__listItemPrice sub-listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                        </a>
+                    </figure>
+                </div>
+                <div class ="cart-style sub-cart" style="width: 272px ">
+                    <figure>
+                        <a href="{{ url('product_detail', {'id': '4'}) }}">
+                            <img src="{{ asset('product-7-470x470.jpg', 'save_image') }}">
+                            <p class="ec-newItemRole__listItemTitle sub-listItemTitle">{{ 'Chanh'|trans }}</p>
+                            <p class="ec-newItemRole__listItemPrice sub-listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                        </a>
+                    </figure>
+                </div>
+                <div class ="cart-style sub-cart" style="width: 272px " >
+                    <figure>
+                        <a href="{{ url('product_detail', {'id': '4'}) }}">
+                            <img src="{{ asset('product-23-470x470.jpg', 'save_image') }}">
+                            <p class="ec-newItemRole__listItemTitle sub-listItemTitle">{{ 'Dứa'|trans }}</p>
+                            <p class="ec-newItemRole__listItemPrice sub-listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                        </a>
+                    </figure>
+                </div>  
+                <div class ="cart-style sub-cart" style="width: 272px "  >
+                    <figure>
+                        <a href="{{ url('product_detail', {'id': '3'}) }}">
+                            <img src="{{ asset('product-1-470x470.jpg', 'save_image') }}">
+                            <p class="ec-newItemRole__listItemTitle sub-listItemTitle">{{ 'Táo Xanh'|trans }}</p>
+                            <p class="ec-newItemRole__listItemPrice sub-listItemPrice">{{ '￥1,200(税込)'|trans }}</p>
+                        </a>
+                    </figure>                
+                </div>        
+                <div class ="cart-style sub-cart"  style="width: 272px ">
+                    <figure>
+                        <a href="{{ url('product_detail', {'id': '4'}) }}">
+                            <img src="{{ asset('nhoxanh.jpg', 'save_image') }}">
+                            <p class="ec-newItemRole__listItemTitle sub-listItemTitle">{{ 'Nho Xanh'|trans }}</p>
+                            <p class="ec-newItemRole__listItemPrice sub-listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                        </a>
+                    </figure>
+                </div>
+                <div class ="cart-style sub-cart" style="width: 272px " >
+                    <figure>
+                        <a href="{{ url('product_detail', {'id': '4'}) }}">
+                            <img src="{{ asset('product-7-470x470.jpg', 'save_image') }}">
+                            <p class="ec-newItemRole__listItemTitle sub-listItemTitle">{{ 'Chanh'|trans }}</p>
+                            <p class="ec-newItemRole__listItemPrice sub-listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                        </a>
+                    </figure>
+                </div>
+                <div class ="cart-style sub-cart"  style="width: 272px ">
+                    <figure>
+                        <a href="{{ url('product_detail', {'id': '4'}) }}">
+                            <img src="{{ asset('product-23-470x470.jpg', 'save_image') }}">
+                            <p class="ec-newItemRole__listItemTitle sub-listItemTitle">{{ 'Dứa'|trans }}</p>
+                            <p class="ec-newItemRole__listItemPrice sub-listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                        </a>
+                    </figure>
+                </div>
+                <div class ="cart-style sub-cart" style="width: 272px " >
+                    <figure>
+                        <a href="{{ url('product_detail', {'id': '3'}) }}">
+                            <img src="{{ asset('product-2-470x470.jpg', 'save_image') }}">
+                            <p class="ec-newItemRole__listItemTitle sub-listItemTitle">{{ 'Xoài'|trans }}</p>
+                            <p class="ec-newItemRole__listItemPrice sub-listItemPrice">{{ '￥1,200(税込)'|trans }}</p>
+                        </a>
+                    </figure>                
+                </div>        
+                <div class ="cart-style sub-cart" style="width: 272px ">
+                    <figure>
+                        <a href="{{ url('product_detail', {'id': '4'}) }}">
+                            <img src="{{ asset('product-4-470x470.jpg', 'save_image') }}">
+                            <p class="ec-newItemRole__listItemTitle sub-listItemTitle">{{ 'Bông cải'|trans }}</p>
+                            <p class="ec-newItemRole__listItemPrice sub-listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                        </a>
+                    </figure>
+                </div>
+                <div class ="cart-style sub-cart" style="width: 272px ">
+                    <figure>
+                        <a href="{{ url('product_detail', {'id': '4'}) }}">
+                            <img src="{{ asset('product-15-470x470.jpg', 'save_image') }}">
+                            <p class="ec-newItemRole__listItemTitle sub-listItemTitle">{{ 'Chanh dây'|trans }}</p>
+                            <p class="ec-newItemRole__listItemPrice sub-listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                        </a>
+                    </figure>
+                </div>
+                <div class ="cart-style sub-cart" style="width: 272px ">
+                    <figure>
+                        <a href="{{ url('product_detail', {'id': '4'}) }}">
+                            <img src="{{ asset('product-25-470x470.jpg', 'save_image') }}">
+                            <p class="ec-newItemRole__listItemTitle sub-listItemTitle">{{ 'lựu'|trans }}</p>
+                            <p class="ec-newItemRole__listItemPrice sub-listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                        </a>
+                    </figure>
+                </div>
+            </div>  
+    </div>
+    
+</div>

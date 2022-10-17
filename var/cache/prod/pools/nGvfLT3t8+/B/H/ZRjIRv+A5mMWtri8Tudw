@@ -1,0 +1,3 @@
+<?php //Plugin%255CMailMagazine4%255CController%255CMailMagazineHistoryController%2523searchDataToDisplayData
+
+return [PHP_INT_MAX, []];

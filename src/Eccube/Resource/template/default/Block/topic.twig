@@ -1,0 +1,150 @@
+{#
+This file is part of EC-CUBE
+
+Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
+
+http://www.ec-cube.co.jp/
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+#}
+
+<div class="ec-topicRole">
+    <div class="ec-role">
+        <div class="ec-secHeading">
+            <h1>Sản phẩm nổi bật</h1>
+            <span class="ec-secHeading__en style-color"><a href="#moinhat">{{ 'mới nhất  '|trans }}</a></span>
+            <span class="ec-secHeading__en"><a href="#giamgia">{{ 'giảm giá  '|trans }}</a></span>
+            <span class="ec-secHeading__en"><a href="#banchay">{{ 'bán chạy'|trans }}</a></span>
+        </div>
+
+        <div class="ItemRole__listItem column-content" id ="moinhat">          
+            <div class ="cart-style">
+                <figure>
+                      <a href="{{ url('product_list') }}?category_id={{ Category.id }}">
+                        <img src="{{ asset('product-1-470x470.jpg', 'save_image') }}">
+                        <p class="ec-newItemRole__listItemTitle">{{ 'Táo Xanh'|trans }}</p>
+                        <p class="ec-newItemRole__listItemPrice">{{ '￥1,200(税込)'|trans }}</p>
+                    </a>                    
+                </figure>                
+            </div>        
+            <div class ="cart-style">
+                <figure>
+                      <a href="{{ url('detail') }}?category_id=1">
+                        <img src="{{ asset('nhoxanh.jpg', 'save_image') }}">
+                        <p class="ec-newItemRole__listItemTitle">{{ 'Nho Xanh'|trans }}</p>
+                        <p class="ec-newItemRole__listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                    </a>
+                </figure>
+            </div>
+            <div class ="cart-style">
+                <figure>
+                    <a href="{{ url('product_detail', {'id': '1'}) }}">
+                        <img src="{{ asset('product-7-470x470.jpg', 'save_image') }}">
+                        <p class="ec-newItemRole__listItemTitle">{{ 'Chanh'|trans }}</p>
+                        <p class="ec-newItemRole__listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                    </a>
+                </figure>
+             </div>
+            <div class ="cart-style">
+                <figure>
+                    <a href="{{ url('product_detail', {'id': '4'}) }}">
+                        <img src="{{ asset('product-23-470x470.jpg', 'save_image') }}">
+                        <p class="ec-newItemRole__listItemTitle">{{ 'Dứa'|trans }}</p>
+                        <p class="ec-newItemRole__listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                    </a>
+                </figure>
+            </div>
+           
+        </div>
+        <div class="sub2_ItemRole__listItem sub2_column-content" id ="giamgia">          
+            <div class ="cart-style">
+                <figure>
+                    <a href="{{ url('product_detail', {'id': '3'}) }}">
+                        <img src="{{ asset('product-1-470x470.jpg', 'save_image') }}">
+                        <p class="ec-newItemRole__listItemTitle">{{ 'Táo Xanh'|trans }}</p>
+                        <p class="ec-newItemRole__listItemPrice">{{ '￥1,200(税込)'|trans }}</p>
+                    </a>
+                </figure>                
+            </div>        
+            <div class ="cart-style">
+                <figure>
+                    <a href="{{ url('product_detail', {'id': '4'}) }}">
+                        <img src="{{ asset('nhoxanh.jpg', 'save_image') }}">
+                        <p class="ec-newItemRole__listItemTitle">{{ 'Nho Xanh'|trans }}</p>
+                        <p class="ec-newItemRole__listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                    </a>
+                </figure>
+            </div>
+            <div class ="cart-style">
+                <figure>
+                    <a href="{{ url('product_detail', {'id': '4'}) }}">
+                        <img src="{{ asset('product-7-470x470.jpg', 'save_image') }}">
+                        <p class="ec-newItemRole__listItemTitle">{{ 'Chanh'|trans }}</p>
+                        <p class="ec-newItemRole__listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                    </a>
+                </figure>
+             </div>
+            <div class ="cart-style">
+                <figure>
+                    <a href="{{ url('product_detail', {'id': '4'}) }}">
+                        <img src="{{ asset('product-23-470x470.jpg', 'save_image') }}">
+                        <p class="ec-newItemRole__listItemTitle">{{ 'Dứa'|trans }}</p>
+                        <p class="ec-newItemRole__listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                    </a>
+                </figure>
+            </div>
+           
+        </div>
+        <div class="sub1_ItemRole__listItem sub1_column-content" id ="banchay">          
+            <div class ="cart-style">
+                <figure>
+                    <a href="{{ url('product_detail', {'id': '3'}) }}">
+                        <img src="{{ asset('product-2-470x470.jpg', 'save_image') }}">
+                        <p class="ec-newItemRole__listItemTitle">{{ 'Xoài'|trans }}</p>
+                        <p class="ec-newItemRole__listItemPrice">{{ '￥1,200(税込)'|trans }}</p>
+                    </a>
+                </figure>                
+            </div>        
+            <div class ="cart-style">
+                <figure>
+                    <a href="{{ url('product_detail', {'id': '4'}) }}">
+                        <img src="{{ asset('product-4-470x470.jpg', 'save_image') }}">
+                        <p class="ec-newItemRole__listItemTitle">{{ 'Bông cải'|trans }}</p>
+                        <p class="ec-newItemRole__listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                    </a>
+                </figure>
+            </div>
+            <div class ="cart-style">
+                <figure>
+                    <a href="{{ url('product_detail', {'id': '4'}) }}">
+                        <img src="{{ asset('product-15-470x470.jpg', 'save_image') }}">
+                        <p class="ec-newItemRole__listItemTitle">{{ 'Chanh dây'|trans }}</p>
+                        <p class="ec-newItemRole__listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                    </a>
+                </figure>
+             </div>
+            <div class ="cart-style">
+                <figure>
+                    <a href="{{ url('product_detail', {'id': '4'}) }}">
+                        <img src="{{ asset('product-25-470x470.jpg', 'save_image') }}">
+                        <p class="ec-newItemRole__listItemTitle">{{ 'lựu'|trans }}</p>
+                        <p class="ec-newItemRole__listItemPrice">{{ '￥800(税込)'|trans }}</p>
+                    </a>
+                </figure>
+            </div>
+           
+        </div>
+         <div class="ec-newItemRole__listItem">
+                <div class="ec-newItemRole__listItemHeading ec-secHeading--tandem">
+                    <span class="ec-secHeading__en">{{ 'NEW ITEM'|trans }}</span>
+                    <span class="ec-secHeading__line"></span>
+                    <span class="ec-secHeading__ja">{{ '新着商品'|trans }}</span>
+                    <a class="ec-inlineBtn--top" href="{{ url('product_list') }}">{{ 'more'|trans }}</a>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+
